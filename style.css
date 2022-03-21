@@ -1,15 +1,5 @@
-/* For Grid */
+/* You do not have to alter any of the code in this section for this challenge. */
 
-.row div {
-    border: solid lightgreen;
-  }
-  
-  #viewport-size {
-    background: lightgreen;
-    padding: 5px;
-  }
-  
-  body {
-    margin: 10px;
-  }
-  
+body {
+  padding: 2rem;
+}

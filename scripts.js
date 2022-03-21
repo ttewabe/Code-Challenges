@@ -1,24 +1,6 @@
-// For grid You do not need to change anything in this JS section.
+// You do not have to alter any of the code in this section for this challenge.
 
-viewportSizeSpan = document.getElementById("viewport-size");
-breakpointNameSpan = document.getElementById("breakpointName");
-let bp = "";
-
-// Get and display viewport size on first load of document.
-viewportSizeSpan.textContent = window.innerWidth;
-
-function updateViewportBreakpointDisplay() {
-  // Display the breakpoint name 
-  viewportSizeSpan.textContent = window.innerWidth;
-  switch(true) {
-    case (window.innerWidth >= 1200): bp = "(XL)"; break;
-    case (window.innerWidth >= 992): bp = "(LG)"; break;
-    case (window.innerWidth >= 768): bp = "(MD)"; break;
-    case (window.innerWidth >= 576): bp = "(SM)"; break;
-    default: bp = "(Extra small)"; 
-  }
-  breakpointNameSpan.textContent = bp;
+function changeColor() {
+  const color = document.getElementById("colors").value;
+  document.body.style.backgroundColor = color;
 }
-
-// Add event listener to run displaySize function whenever viewport is resized.
-window.addEventListener("resize", updateViewportBreakpointDisplay);
