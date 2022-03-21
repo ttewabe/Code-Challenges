@@ -1,0 +1,43 @@
+<p>This Code Challenge is intended to give you more practice with using arrays and for loops, as well as experience with researching array methods on your own.</p>
+
+<p>For this Code Challenge, you will add code to the JS section of this Codepen. You will not need to update any code in the HTML or CSS sections.</p>
+
+<p>Open the Codepen Console (button at bottom left) to see your console log messages. However, remember that the Codepen Console does not show error messages, so if you suspect that you have an error in your code, then open your browser's developer console to check for error messages.</p>
+
+<h3>Challenge 1</h3>
+In the JS section of this Codepen, a set of two arrays have been created with five names each. A standard <strong>for</strong> loop has been started for you. In your forked version of this Codepen, complete the code for the for loop to iterate through the arrays as follows:
+    <ul>
+      <li>In the <em>condition</em> section of the <strong>for</strong> loop, add a condition such that the loop will run only as long as the iterator <strong>i</strong> is less than the <strong>length</strong> of the array. </li>
+      <li>In the <em>final-expression</em> section of the <strong>for</strong> loop, use the <strong>increment</strong> operator to increment <strong>i</strong> by one.</li>
+      <li>In the <em>body</em> of the <strong>for</strong> loop, use the iterator <strong>i</strong> as the array <strong>index</strong> to console.log each of the first names in the firstNamesArray along with the correspondingly indexed last name in the lastNamesArray together. 
+    </ul>
+
+<h3>Challenge 2</h3>
+<ul><li>You will need to research JavaScript array methods for this challenge.</li>
+  <li>There is an array method that will allow you to <strong>reverse</strong> the order of items in an array. Can you insert two lines of code at line 3 of the JS section of your forked version of this Codepen so that both the arrays are reversed before entering the for loop? You will need to write two separate statements for this.</li>
+</ul>
+
+<h3>Resources</h4>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">MDN - For loop</a></li>
+  <li><a href="http://javascript.info/array" target="_blank">JavaScript.info - Arrays</a></li>
+  <li><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">W3Schools - JavaScript Array Reference</a></li>
+</ul>
+
+<Script>
+const firstNamesArray = ['Violet', 'Charlie', 'Veruca', 'Mike', 'Augustus'];
+const lastNamesArray = ['Beauregarde', 'Bucket', 'Salt', 'Teavee', 'Gloop'];
+
+
+
+
+for (let i = 0; i < firstNamesArray.length; i++) {
+  console.log(firstNamesArray[i] + ' ' + lastNamesArray[i]); 
+}
+</script>
+
+
+<link rel="stylesheet" href="xxxx.css" />body { 
+  margin: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
