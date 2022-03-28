@@ -1,88 +1,53 @@
-let max = 100;
-let min = 1;
-let nGuesses = 0;
-let currGuess = 0;
-
-/* getElementById would be fine to use below as well instead of querySelector */
-const yesBtn = document.querySelector("#yesBtn");
-const noBtn = document.querySelector("#noBtn");
-const higherBtn = document.querySelector("#higherBtn");
-const lowerBtn = document.querySelector("#lowerBtn");
-const startBtn = document.querySelector("#startBtn");
-const guessBtn = document.querySelector("#guessBtn");
-const message = document.querySelector("#instructions");
-const resetBtn = document.querySelector("#resetBtn");
-
-startBtn.addEventListener("click", tryGuess);
-yesBtn.addEventListener("click", rightGuess);
-noBtn.addEventListener("click", wrongGuess);
-higherBtn.addEventListener("click", numIsHigher);
-lowerBtn.addEventListener("click", numIsLower);
-resetBtn.addEventListener("click",startOver);
-
-toggleBtns([startBtn], true);
-
-function tryGuess(){ 
-    if (!nGuesses) { // first time guessing
-        toggleBtns([startBtn], false);
-        toggleBtns([guessBtn], true);
+class Monster {
+    constructor(type, color) {
+        this.type = type;
+        this.color = color;
+        this.isScary = true;
     }
-    nGuesses++;    
-    currGuess = Math.floor((max - min)/2) + min;
-    console.log(`Guessing between ${min} and ${max} - guessing ${currGuess} - this is guess number ${nGuesses}`);
-    guessBtn.textContent = currGuess + "!";
-    message.textContent = "Am I correct?";
-    toggleBtns([yesBtn, noBtn], true);
-}
-
-function toggleBtns(btnsArray, on) { 
-    for (const btn of btnsArray) {
-        if (on) {
-            btn.style.display = "inline-block"; 
-        } else {
-            btn.style.display = "none";
-        }
+    roar() {
+        console.log(`The ${this.color} ${this.type} lets out a tremendous roar!`);
     }
 }
 
-function rightGuess() {
-    toggleBtns([yesBtn, noBtn], false);
-    message.textContent = `I guessed your number in ${nGuesses} tries!`;
-    toggleBtns([resetBtn],true);
-    
-}
-
-function wrongGuess() {
-    toggleBtns([yesBtn, noBtn], false);
-    if (max < min){
-        toggleBtns([resetBtn], true);
-    message.textContent = `Error, reset game!`
-    }else{
-        toggleBtns([higherBtn, lowerBtn], true);
-    message.textContent = `Is your number higher or lower than ${currGuess}?`; 
+class Dragon extends Monster {
+    constructor(type, color, element) {
+        super(type, color);
+        this.element = element;
     }
-} 
-  
-function numIsHigher() {
-    min = currGuess + 1;
-    console.log("Changing the minimum to: " + min);
-    toggleBtns([higherBtn, lowerBtn], false);
-    tryGuess();
+    fly() {
+        console.log(`The ${this.color} ${this.element} ${this.type} flaps its wings and begins to fly.`);
+    }
+   poison() {
+            console.log(`The ${this.color} ${this.element} ${this.type} blood and fangs are very poison to human.`);
+ }
 }
 
-function numIsLower() {
-    max = currGuess - 1;
-    console.log("Changing the maximum to: " + max);
-    toggleBtns([higherBtn, lowerBtn], false);
-    tryGuess();   
+class Werewolf extends Monster {
+    constructor(type, color) {
+        super(type, color);
+    }
+    howl() {
+        console.log(`The ${this.color} ${this.type} howls loudly.`);
+    }
 }
 
-function startOver(){
-    message.textContent = `Think of a number between 1-100 and click the blue button when you're ready.`;
-    toggleBtns([resetBtn, guessBtn],false);
-    toggleBtns([startBtn],true);
-    max = 100;
-    min = 1;
-    nGuesses = 0;
-    currGuess = 0;
+class Lizard extends Monster {
+    constructor(type, color, size) {
+       super(type, color);
+      this.size = size;
+    }
+    howl() {
+        console.log(`The ${this.size}  ${this.color} ${this.type} bites is not fatal to humans.`);
+    }
 }
+
+const woodDragon = new Dragon("dragon", "brown", "wood");
+woodDragon.roar()
+woodDragon.fly()
+woodDragon.poison()
+
+const werewolf1 = new Werewolf("werewolf", "golden");
+werewolf1.howl();
+
+const lizard= new Lizard("lizard", "grey", "large");
+lizard.howl();
