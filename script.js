@@ -1,27 +1,25 @@
-// 1
-const numbers = [1, 1, 2, 3, 5];
-const numbersAddFive = numbers.map(num => num + 5); 
-// The below line should console.log: [6, 6, 7, 8, 10]
-console.log(numbersAddFive); 
-// 2
-const numbers1 = ['1:', '1:', '2:', '3:', '5:'];
-const numbersReformatted = numbers1.map(num => num + " "); 
+const pets = ["goldfish", "dog", "turtle", "tiger"]
 
-console.log(numbersReformatted);
+//1 
+const petsShortNames = pets.filter(pets => pets.length < 6)
+// The below line should console.log: ["dog", "tiger"]
+console.log(petsShortNames);
 
-// 3
-const words = ["planes", "trains", "automobiles"];
-const singularWords = words.map(words => words.slice(0, -1));
-// The below line should console.log: ["plane", "train", "automobile"]
-console.log(singularWords);
-// 4
-const words1 = ["planes", "trains", "automobiles"];
-const firstLetters = words1.map(words1 => words1.slice(0,1));
-// The below line should console.log: ["p", "t", "a"]
-console.log(firstLetters);
+//2 - uncomment line 9 and line 11 when you've finished challenge 1
+const pets1 = ["goldfish", "dog", "turtle", "tiger"]
+const petsTNames = pets1.filter( pets1 => pets1.includes("t"))
+// The below line should console.log: ["turtle", "tiger"] 
+console.log(petsTNames);
 
-// Bonus:
-const words2 = ["planes", "trains", "automobiles"];
-const capitalizedWords = words2.map(words2 => words2.charAt(0).toUpperCase() + words2.slice(1));
-// The below line should console.log: ["Planes", "Trains", "Automobiles"]
-console.log(capitalizedWords);
+
+//3 - uncomment line 15 and line 17
+const numbers = [3, 7, 4, 5, 10]; 
+const numbersBiggerThanFour = numbers.filter(numbers => numbers > 4)
+// The below line should console.log: [7, 5, 10]
+console.log(numbersBiggerThanFour);
+//Bonus - uncomment line 20 and line 22
+const number = [3, 7, 4, 5, 10]; 
+const evenNumbers = number.filter( number => number % 2 === 0)
+//The below line should console.log: [4, 10]
+console.log(evenNumbers);
+
