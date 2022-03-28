@@ -1,4 +1,5 @@
-body { 
-  font-family: "Oxygen", sans-serif;
+body {
   margin: 1rem;
 }
+
+input { border: solid 3px turquoise; }
