@@ -1,49 +1,26 @@
-// 1 - white rabbit
-const rabbit = { 
-  color: "white",
-  checkWatch() {
-    console.log(`A ${this.color} rabbit checks his watch and exclaims, 'I\'m late!'`);
-  }
-};
-rabbit.checkWatch();
+// 1
+const numbers = [1, 1, 2, 3, 5];
+const numbersAddFive = 
+// The below line should console.log: [6, 6, 7, 8, 10]
+console.log(numbersAddFive); 
 
-// 2 - spaceship
-const spaceship = { 
-  name: "Apolo",
-  launch() {
-    alert(`You have launched the spaceship ${this.name}!`)
-  }
-};
-  spaceship.launch(); 
+// 2 - uncomment the lines that start with "const" and "console.log"
+// const numbersReformatted = 
+// The below line should console.log: ["1: ", "1: ", "2: ", "3: ", "5: "] 
+// console.log(numbersReformatted);
 
-// 3 - shopping cart
-const cart = {
-  contents:[],
-  addItem(item) {
-    cart.contents.push(item);
-  }
-};
+// 3
+const words = ["planes", "trains", "automobiles"];
+// const singularWords = 
+// The below line should console.log: ["plane", "train", "automobile"]
+// console.log(singularWords);
 
-cart.addItem("laptop");
-console.log("The cart contains:", cart.contents);
+// 4:
+// const firstLetters = 
+// The below line should console.log: ["p", "t", "a"]
+// console.log(firstLetters);
 
-// 4 - lever
-// your code here - uncomment the line below when done
-const lever ={
-  stamp: "ACME",
-  pull() {
-    console.log(`An anvil stamped ${this.stamp} drops on your head.`)
-  }
-}
-lever.pull();
-
-// 5 - Table
-const dog ={
-  name:"Popy",
-  age: "four",
-  color: "Black",
-  woow(){
-    console.log(`My dog ${this.name} is a ${this.color} color and he is ${this.age} years old.`)
-  }
-}
-dog.woow()
+// Bonus:
+// const capitalizedWords = 
+// The below line should console.log: ["Planes", "Trains", "Automobiles"]
+// console.log(capitalizedWords);
